@@ -40,6 +40,13 @@ params:add_number("Y_LSB","Y LSB: ",1,128,106)
 params:add_number("Z_MSB","Z MSB: ",1,128,76)
 params:add_number("Z_LSB","Z LSB: ",1,128,108)
 
+t = metro.init()
+  t.count = 0
+  t.time = 1/60
+  t.event = function(stage)
+    redraw()
+  end
+  t:start()
 --params:bang()
 end
 
@@ -81,8 +88,12 @@ screen.clear()
   if params:get("audio_file") == "-" then
   screen.text("Select Audio in Param Menu")
   else
-    screen.text(params:get("audio_file"))
-    end
+    --screen.text(params:get("audio_file"))
+  end
+  for i=1,4 do
+  screen.stroke()
+  screen.circle(values[i][7]*128,64-(values[i][8]*64),values[i][9]*32)
+  end
   screen.update()
 end
 
