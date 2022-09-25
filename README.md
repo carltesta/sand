@@ -7,5 +7,5 @@ add white noise synth with both norns and MPE control \
 ~enable at least 4 granulators with touch display/control (sensel morph)~ \
 add option to load folder of sound files and granulate them randomly \
 enable granulating of live audio input with record/capture capabilities \
-expand the synthesis options, include variable Playbuf before warp, add RLPF or MoogFF after granulator \
+expand the synthesis options, include variable Playbuf before warp, add RLPF or ~MoogFF~ after granulator \
 add the warpstart and warpend commands to the parameters so they can be midi mapped
